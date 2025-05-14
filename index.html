@@ -146,8 +146,133 @@
     </p>
   
 </div>
+<div class="frank">
+        <h2>5. Get Your Files Ready to Save (Staging)</h2>
 
-  <div class="frankit">
+        <p>
+          After you create or modify files in your project, Git doesn't
+          automatically save them. Instead, Git uses something called the
+          <strong>staging area</strong> (also known as the <em>index</em>) to
+          help you choose which changes to save (commit) next.
+        </p>
+
+        <p>
+          Think of the staging area as a preparation zone. You tell Git: "These
+          are the changes I want to include in my next save."
+        </p>
+
+        <h3>Tracked vs Untracked Files</h3>
+        <ul>
+          <li>
+            <strong>Untracked Files:</strong> Files Git is not yet monitoring.
+            These are usually new files you've just created.
+          </li>
+          <li>
+            <strong>Tracked Files:</strong> Files Git is already watching.
+            Changes in these files will show up when you check status, and you
+            can stage them.
+          </li>
+        </ul>
+
+        <h3>Adding Files to the Staging Area</h3>
+        <p>You can add individual files like this:</p>
+        <code>git add filename</code>
+
+        <p>Or, add all changes in the current directory and subfolders:</p>
+        <code>git add .</code>
+
+        <p>Another way to add specific file types:</p>
+        <code>git add *.html</code> adds all HTML files.
+
+        <p>Or to interactively choose files to stage:</p>
+        <code>git add -p</code> — lets you go through each change and choose
+        whether to stage it.
+
+        <p>Here's an example of adding files using <code> git add .</code></p>
+
+        <figure>
+          <img
+            src="images/git-add.png"
+            alt="Git add command"
+            width="500px"
+            title="Adding files to the staging area using git add"
+          />
+          <figcaption>
+            Screenshot: Adding files to the staging area using git add
+          </figcaption>
+        </figure>
+
+        <p>
+          Once you've staged the changes, Git is now ready to commit them.
+          Staged changes are like "files selected to be saved." If you forget to
+          stage something, it won't be saved in the next commit.
+        </p>
+      </div>
+
+ <div class="frank">
+        <h2>5. Get Your Files Ready to Save (Staging)</h2>
+
+        <p>
+          After you create or modify files in your project, Git doesn't
+          automatically save them. Instead, Git uses something called the
+          <strong>staging area</strong> (also known as the <em>index</em>) to
+          help you choose which changes to save (commit) next.
+        </p>
+
+        <p>
+          Think of the staging area as a preparation zone. You tell Git: "These
+          are the changes I want to include in my next save."
+        </p>
+
+        <h3>Tracked vs Untracked Files</h3>
+        <ul>
+          <li>
+            <strong>Untracked Files:</strong> Files Git is not yet monitoring.
+            These are usually new files you've just created.
+          </li>
+          <li>
+            <strong>Tracked Files:</strong> Files Git is already watching.
+            Changes in these files will show up when you check status, and you
+            can stage them.
+          </li>
+        </ul>
+
+        <h3>Adding Files to the Staging Area</h3>
+        <p>You can add individual files like this:</p>
+        <code>git add filename</code>
+
+        <p>Or, add all changes in the current directory and subfolders:</p>
+        <code>git add .</code>
+
+        <p>Another way to add specific file types:</p>
+        <code>git add *.html</code> adds all HTML files.
+
+        <p>Or to interactively choose files to stage:</p>
+        <code>git add -p</code> — lets you go through each change and choose
+        whether to stage it.
+
+        <p>Here's an example of adding files using <code> git add .</code></p>
+
+        <figure>
+          <img
+            src="images/git-add.png"
+            alt="Git add command"
+            width="500px"
+            title="Adding files to the staging area using git add"
+          />
+          <figcaption>
+            Screenshot: Adding files to the staging area using git add
+          </figcaption>
+        </figure>
+
+        <p>
+          Once you've staged the changes, Git is now ready to commit them.
+          Staged changes are like "files selected to be saved." If you forget to
+          stage something, it won't be saved in the next commit.
+        </p>
+      </div>
+
+      <div class="frankit">
         <h2>6. Save Your Work (Commit)</h2>
 
         <p>
@@ -282,92 +407,6 @@ and updated the error messaging system.
       <p>To return to the latest commit on your main branch, use:</p>
       <code>git checkout main</code>
     </div>
-
-  <h3>Alternative Way to Write Detailed Commit Messages</h3>
-  <p>Instead of using the <code>-m</code> option, you can simply type:</p>
-  <code>git commit</code>
-
-  <p>
-    This will open your default text editor (such as <strong>Vim</strong>,
-    <strong>Nano</strong>, or <strong>VS Code</strong>). Inside the editor:
-  </p>
-  <p>
-    This method is preferred in larger teams and open-source projects
-    because it improves the clarity and professionalism of your commit
-    history.
-  </p>
-  <h3>Configure VS Code as Your Git Commit Editor</h3>
-  <p>
-    By default, Git might open editors like Vim or Nano when writing commit
-    messages. If you prefer using Visual Studio Code, you can set it as your
-    default Git editor with:
-  </p>
-  <code>git config --global core.editor "code --wait"</code>
-  <p>
-    The <code>--wait</code> flag tells Git to pause until you're done
-    writing and saving the commit message in VS Code.
-  </p>
-
-  <p>
-    After running <code>git commit</code>, VS Code will launch, allowing you
-    to write:
-  </p>
-  <ol>
-    <li>A short and meaningful title on the first line</li>
-    <li>A blank line</li>
-    <li>A detailed description of the changes</li>
-  </ol>
-
-  <p>Example commit message inside VS Code:</p>
-  <pre>
-Fix crash when user submits empty form
-
-The crash occurred because input validation wasn't applied on
-empty fields. Added client-side and server-side validation logic
-and updated the error messaging system.
-</pre>
-
-  <h3>View Past Commits</h3>
-  <p>To see a history of all your commits, use:</p>
-  <code>git log</code>
-
-  <p>
-    This command shows a list of all commits, their authors, timestamps, and
-    unique commit hashes.
-  </p>
-
-  <figure>
-    <img src="images/git-log.png" alt="Git log command" width="500px" title="Logging the commits" />
-    <figcaption>Screenshot: Viewing commit history with git log</figcaption>
-  </figure>
-
-  <h3>Go Back to a Specific Commit</h3>
-  <p>
-    Each commit in Git has a unique ID (called a
-    <strong>commit hash</strong>). You can temporarily go back to that point
-    using:
-  </p>
-  <code>git checkout [commit-hash]</code>
-
-  <p>
-    Example:
-    <br />
-    <code>git checkout a1b2c3d4</code>
-  </p>
-
-  <h4>!!! Note:</h4>
-  <p>
-    This puts you in a <strong>detached HEAD</strong> state — meaning you're
-    no longer on a branch. If you make changes here and want to keep them,
-    create a new branch:
-  </p>
-  <code>git checkout -b new-branch-name</code>
-
-  <p>To return to the latest commit on your main branch, use:</p>
-  <code>git checkout main</code>
-  </div>
-
-  <div>
     <h2>7. Branches</h2>
     <p>
       Branches let you work on new ideas or features without changing the main version of your project.
