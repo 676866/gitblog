@@ -157,7 +157,7 @@ background-color: #f9f9f9
 }
 .frank h2{
   color:#2E41AD;
-  background-color: #f9f9f9
+  background-color: #f9f9f9;
 
 }
 .frank p{
@@ -231,7 +231,7 @@ color: #2E41AD;
 .frankit figcaption{
    margin-top: 0.5rem;
   font-size: 1.0rem;
-  color:fuchsia
+  color:fuchsia;
 }
 .franko{
 background-color: #f9f9f9;
@@ -265,7 +265,7 @@ color: var(--blue);
 .franko figcaption{
    margin-top: 0.5rem;
   font-size: 1.0rem;
-  color:fuchsia
+  color:fuchsia;
 }
 
 .franko h3{
